@@ -1,0 +1,21 @@
+@import '~normalize.css';
+@import '~dragula/dist/dragula.css';
+
+html {
+  height: 100%;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import 'assets/scss/dragula';
+@import 'assets/scss/variables';
+@import 'assets/scss/base';
+@import 'assets/scss/links';
+
+

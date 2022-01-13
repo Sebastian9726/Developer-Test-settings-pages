@@ -1,0 +1,31 @@
+@import 'variables';
+
+.small-page {
+  max-width: 1000px;
+  margin: 0 0 40px;
+}
+
+.block {
+  margin: 0 0 40px;
+}
+
+h1 {
+  color: $sg-primary-dark;
+}
+
+code {
+  background-color: $sg-grey;
+  padding: 2px 6px;
+}
+
+p, li {
+  line-height: 1.6;
+}
+
+.alert {
+  padding: 10px 20px;
+  border: 1px solid lighten($sg-primary, 40%);
+  background: lighten($sg-primary, 52%);
+  border-radius: 4px;
+  color: $sg-primary;
+}

@@ -1,0 +1,10 @@
+@import 'variables';
+
+a {
+  color: $sg-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $sg-link-hover;
+  }
+}

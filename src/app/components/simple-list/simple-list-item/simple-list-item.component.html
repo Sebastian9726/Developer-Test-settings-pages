@@ -1,0 +1,18 @@
+<ng-template #contentTemplate>
+  <h3>{{ title }}</h3>
+  <p><ng-content></ng-content></p>
+</ng-template>
+
+<li class="simple-list-item">
+  <a [href]="link" target="_blank" *ngIf="linkTo === 'url'">
+    <ng-container *ngTemplateOutlet="contentTemplate; context: {$implicit: false}"></ng-container>
+  </a>
+
+  <a href="javascript:" [routerLink]="link" *ngIf="linkTo === 'routerLink'">
+    <ng-container *ngTemplateOutlet="contentTemplate; context: {$implicit: false}"></ng-container>
+  </a>
+
+  <div *ngIf="!linkTo">
+    <ng-container *ngTemplateOutlet="contentTemplate; context: {$implicit: false}"></ng-container>
+  </div>
+</li>
