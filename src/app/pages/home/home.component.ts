@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
     },
     {
       index: 7,
-      title: 'Set up a (free) GitHub Pages Site',
+      title: 'Publish your test to a (free) GitHub Pages Site',
       linkTo: 'routerLink',
       link: '/ghpages',
       content: 'Once all the tasks have been completed, publish your Developer Test to GitHub Pages.',
