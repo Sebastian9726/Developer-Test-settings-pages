@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ghpages',
+  standalone: true,
+  imports: [],
   templateUrl: './ghpages.component.html',
-  styleUrls: ['./ghpages.component.scss']
+  styleUrl: './ghpages.component.scss'
 })
-export class GhpagesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class GhpagesComponent {
 
 }

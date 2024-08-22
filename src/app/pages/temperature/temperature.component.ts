@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-temperature',
+  standalone: true,
+  imports: [],
   templateUrl: './temperature.component.html',
-  styleUrls: ['./temperature.component.scss']
+  styleUrl: './temperature.component.scss'
 })
-export class TemperatureComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class TemperatureComponent {
 
 }

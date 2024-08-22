@@ -1,7 +1,8 @@
-@import 'src/assets/scss/variables';
+@import '../../../assets/scss/variables';
 
 .footer {
-  background: $sg-grey-dark;
-  color: #FFF;
-  padding: 0.4rem 1.4rem;
+    background: $sg-grey-dark;
+    color: #FFF;
+    padding: 0.4rem 1.4rem;
+    position: sticky;
 }
