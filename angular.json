@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "developer-test-2024": {
+        "sfgp-developer-test": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/developer-test-2024",
+                        "outputPath": "dist/sfgp-developer-test",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
@@ -68,10 +68,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "developer-test-2024:build:production"
+                            "buildTarget": "sfgp-developer-test:build:production"
                         },
                         "development": {
-                            "buildTarget": "developer-test-2024:build:development"
+                            "buildTarget": "sfgp-developer-test:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -99,6 +99,9 @@
                         ],
                         "scripts": []
                     }
+                },
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy"
                 }
             }
         }

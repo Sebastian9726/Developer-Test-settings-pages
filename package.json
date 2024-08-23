@@ -5,7 +5,8 @@
         "ng": "ng",
         "start": "ng serve",
         "build": "ng build",
-        "watch": "ng build --watch --configuration development"
+        "watch": "ng build --watch --configuration development",
+        "deploy": "ng deploy --base-href=/Developer-Test/"
     },
     "private": true,
     "dependencies": {
@@ -37,6 +38,7 @@
         "@angular-devkit/build-angular": "^18.1.4",
         "@angular/cli": "^18.1.4",
         "@angular/compiler-cli": "^18.1.0",
+        "angular-cli-ghpages": "^2.0.1",
         "typescript": "~5.5.2"
     }
 }
