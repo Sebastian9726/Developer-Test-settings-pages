@@ -5,7 +5,10 @@
         </a>
     </div>
 
-    <ul class="menu-items">
+    <!-- Botón de menú para móvil -->
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+    <ul class="menu-items" [ngClass]="{ 'active': menuOpen }">
         <li>
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                 Home
@@ -39,7 +42,7 @@
     </ul>
 
     <div class="temperature-details">
-        <p>Temperature: 32º</p>
+        <p>Temperature: {{ appService.currentTemperature() }}º</p>
     </div>
 
     <div class="github">

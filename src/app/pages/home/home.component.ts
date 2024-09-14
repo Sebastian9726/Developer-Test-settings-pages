@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {SimpleListComponent} from "../../shared/simple-list/simple-list.component";
-import {SimpleListItemComponent} from "../../shared/simple-list-item/simple-list-item.component";
-import {ISimpleListItem} from "../../shared/simple-list-item/simple-list-item.interface";
-import {NgForOf} from "@angular/common";
+import { Component } from '@angular/core';
+import { SimpleListComponent } from "../../shared/simple-list/simple-list.component";
+import { SimpleListItemComponent } from "../../shared/simple-list-item/simple-list-item.component";
+import { ISimpleListItem } from "../../shared/simple-list-item/simple-list-item.interface";
+import { NgForOf } from "@angular/common";
 
 @Component({
     selector: 'app-home',
@@ -16,6 +16,7 @@ import {NgForOf} from "@angular/common";
     styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
 
     list: ISimpleListItem[] = [
         {
