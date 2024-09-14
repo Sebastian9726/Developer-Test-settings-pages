@@ -23,10 +23,26 @@ export class TaskboardComponent implements OnInit, OnDestroy {
         this.dragulaService.createGroup(this.list, {
             revertOnSpill: true,
             accepts: (el, target, source, sibling) => {
+                if (!target || !source) {
+                    return false;
+                }
+                const targetListClass = target.classList.contains('list-1') ? 'list-1' :
+                                        target.classList.contains('list-2') ? 'list-2' :
+                                        target.classList.contains('list-3') ? 'list-3' : '';
+                const sourceListClass = source.classList.contains('list-1') ? 'list-1' :
+                                        source.classList.contains('list-2') ? 'list-2' :
+                                        source.classList.contains('list-3') ? 'list-3' : '';
+    
+                if (sourceListClass === 'list-1' && targetListClass === 'list-3') {
+                    return false;
+                }
+                if (sourceListClass === 'list-3' && targetListClass === 'list-2') {
+                    return false;
+                }
                 return true;
             }
         });
-
+    
         this.setData();
     }
 
