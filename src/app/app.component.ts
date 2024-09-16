@@ -1,11 +1,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import { AppService } from './app.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet],
+    imports: [RouterOutlet,FontAwesomeModule],
     template: '<router-outlet />'
 })
 export class AppComponent implements OnInit,OnDestroy  {

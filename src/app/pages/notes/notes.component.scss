@@ -1,0 +1,164 @@
+@import '../../../assets/scss/variables';
+
+.notes-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrap-list {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    .add-btn {
+        color: white;
+        background-color: #28a745;
+        display: block;
+        border-radius: 8px;
+        height: 2rem;
+
+        &:hover {
+            background-color: #1f6931;
+        }
+    }
+}
+
+.header-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.note-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.note-input,
+.search-input {
+    display: flex;
+    margin-bottom: 20px;
+
+    input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.edit-btn {
+    color: #007bff;
+}
+
+.list-of-notes-container {
+    .list {
+        flex: 1;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 300px;
+
+        .add-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        
+            &:hover {
+                background-color: #53aa66;
+            }
+            align-self: flex-end;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+
+            li {
+                padding: 8px;
+                margin-bottom: 8px;
+                background-color: #f1f1f1;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+
+                .delete-btn {
+                    background-color: #dc3545;
+                    color: white;
+                    border: none;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #c82333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .list-of-notes-container{
+        flex-direction: column;
+    }
+
+    .wrap-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .notes-container {
+        padding: 0px;
+        width: 100%;
+    }
+}

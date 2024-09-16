@@ -1,6 +1,41 @@
 <div class="small-page">
     <h1>Create a Notes Component</h1>
-    <p>Using the <code>NotesComponent</code>, create a place to add a new note, as well as view other notes that have been created.
-        In this task we'd like you to show off your creativity and design skills, so bonus points for extra features or out-of-the-box ideas.</p>
+    <p>Using the <code>NotesComponent</code>, create a place to add a new note, as well as view other notes that have
+        been created.
+        In this task we'd like you to show off your creativity and design skills, so bonus points for extra features or
+        out-of-the-box ideas.</p>
     <p class="alert">You do not need a backend to save the data, save to the NotesService only.</p>
+    <div class="notes-container">
+        <h2>Notes</h2>
+        <div class="search-input">
+            <input type="text" [(ngModel)]="searchQuery" placeholder="Search notes..." />
+        </div>
+        <div class="wrap-list">
+            <div class="header-list">
+                <h3>Notes app</h3>
+                <button class="add-btn" (click)="openModal()">
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                </button>
+            </div>
+            <div class="list-of-notes-container">
+                <div class="list notes">
+                    <div class="note-list">
+                        <div *ngFor="let note of notes | filter: searchQuery " class="note-item">
+                            <app-note-item [note]="note" (delete)="deleteNote(note)" (edit)="openModal(note)">
+                            </app-note-item>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Llamar al componente modal -->
+    <app-note-modal 
+    [showModal]="showModal"
+    [editMode]="editMode"
+    [comment]="newComment"
+    (closeModal)="closeModal()"
+    (saveNote)="saveNoteFromModal($event)"
+    (editNote)="editNoteFromModal($event)"
+    ></app-note-modal>
 </div>
